@@ -4,6 +4,8 @@
 *
 * @see https://jigsaw.w3.org/css-validator/validator
 */
+@import url("index.css");
+
 h1,
 h2 {
   font-family: Lato;

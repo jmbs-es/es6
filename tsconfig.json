@@ -1,5 +1,5 @@
 {
-  "compilerOptions": {
-    "target": "esnext"
+  "compilerOptions"&#8282; {
+    "target"&#8282; "esnext"
   }
 }

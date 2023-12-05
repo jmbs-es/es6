@@ -1,47 +1,19 @@
-// Import stylesheets
-import './ch0201.css';
+// Get the button
+let mybutton = document.getElementById("myBtn");
 
-// Write Javascript code!
-// Global scope
-var topic = 'JavaScript';
-var topicLet = 'JavaScript';
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
 
-// Block scope
-if (topic) {
-  console.log('With var we overwrite the global scope');
-  var topic = 'ECMASript ES6';
-  console.log('block topic', topic);
-
-  console.log('With let we only change the block scope');
-  let topicLet = 'ECMASript ES6';
-  console.log('block topic with Let', topicLet);
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
 }
 
-console.log('global is overwritten with var declared in the block', topic);
-console.log(
-  'global is NOT overwritten with let declared in the block',
-  topicLet
-);
-
-var div;
-var box = document.getElementById('box');
-
-console.log('with var all boxes show 5 for i value');
-for (var i = 0; i < 5; i++) {
-  div = document.createElement('div');
-  div.onclick = function () {
-    alert('This box #' + i);
-  };
-  box.appendChild(div);
-}
-
-console.log('with let all boxes show their corresponding value for i value');
-var boxLet = document.getElementById('box-let');
-
-for (let i = 0; i < 5; i++) {
-  div = document.createElement('div');
-  div.onclick = function () {
-    alert('This box #' + i);
-  };
-  boxLet.appendChild(div);
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
