@@ -1,0 +1,26 @@
+/**
+* Congratulations! No Error Found.
+* This document validates as CSS level 3 + SVG !
+*
+* @see https://jigsaw.w3.org/css-validator/validator
+*/
+h1,
+h2 {
+  font-family: Lato;
+}
+
+#box,
+#box-let {
+  display: flex;
+  justify-content: space-around;
+}
+#box > div {
+  height: 5em;
+  width: 5em;
+  background-color: darkblue;
+}
+#box-let > div {
+  height: 5em;
+  width: 5em;
+  background-color: red;
+}
